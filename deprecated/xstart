@@ -1,0 +1,1 @@
+mpirun -np 1 -hostfile machinefile mpiProp 0.013500000 4 4 

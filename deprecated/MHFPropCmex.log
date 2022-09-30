@@ -1,0 +1,25 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=mex 2012.6.30)  29 NOV 2013 12:51
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**MHFPropCmex.cpp
+(./MHFPropCmex.cpp
+This is MeX  Version 1.05  18 XII 1993  (B. Jackowski & M. Ry\'cko)
+! Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.4 ...CoordsX, inCoordsY, outCoordX, outCoordY,z_
+                                                  mm,wavelength_nm)
+? 
+! Emergency stop.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.4 ...CoordsX, inCoordsY, outCoordX, outCoordY,z_
+                                                  mm,wavelength_nm)
+End of file on the terminal!
+
+No pages of output.
