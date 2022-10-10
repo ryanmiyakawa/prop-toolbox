@@ -80,6 +80,7 @@ double * HFPropC(double *apertureR, double *apertureI,
                 int seconds = (int)timeRemaining % 60;
 
                 mexPrintf("Estimated time remaining: %d:%d seconds\n", minutes, seconds);
+                mexEvalString("drawnow;");
             }
 
 
