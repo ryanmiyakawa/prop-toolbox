@@ -68,7 +68,7 @@ double * HFPropC(double *apertureR, double *apertureI,
         for (m = 0; m < numOutPts; m++){
 
             count++;
-            if (count % 1000000 == 0){
+            if (count % 50000000 == 0){
                 time(&end);
                 seconds = difftime(end, start);
                 mexPrintf("Elapsed time: %0.2f seconds.\t", seconds);
