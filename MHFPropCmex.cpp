@@ -30,6 +30,16 @@ double * HFPropC(double *apertureR, double *apertureI,
     // counters:
     long k, m;
     
+    long totalPoints = numInPts * numOutPts;
+
+    long count = 0;
+
+    // Get system time:
+    time_t start, end;
+    time(&start);
+
+    // get elapsed time in seconds:
+    double seconds;
     
     mexPrintf("In pts: %ld\nOut pts: %ld\n", numInPts, numOutPts);
     
@@ -56,6 +66,16 @@ double * HFPropC(double *apertureR, double *apertureI,
     for (k = 0; k < numInPts; k++){
         
         for (m = 0; m < numOutPts; m++){
+
+            count++;
+            if (count % 10000 == 0){
+                time(&end);
+                seconds = difftime(end, start);
+                mexPrintf("Elapsed time: %f seconds", seconds);
+                mexPrintf("Progress: %0.2f percent, %ld of %ld", 
+                          (double)count / (double)totalPoints * 100, count, totalPoints);
+            }
+
 
             R = sqrt( (outCoordsX[m] - inCoordsX[k]) * (outCoordsX[m] - inCoordsX[k]) +
                       (outCoordsY[m] - inCoordsY[k]) * (outCoordsY[m] - inCoordsY[k]) +
