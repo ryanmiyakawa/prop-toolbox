@@ -68,12 +68,12 @@ double * HFPropC(double *apertureR, double *apertureI,
         for (m = 0; m < numOutPts; m++){
 
             count++;
-            if (count % 100000 == 0){
+            if (count % 1000000 == 0){
                 time(&end);
                 seconds = difftime(end, start);
                 mexPrintf("Elapsed time: %0.2f seconds.\t", seconds);
-                mexPrintf("Progress: %0.2f percent, %ld of %ld.\t", 
-                          (double)count / (double)totalPoints * 100, count, totalPoints);
+                mexPrintf("Progress: %0.2f percent, %ldM of %ldM.\t", 
+                          (double)count / (double)totalPoints * 100, count/1000000, totalPoints/1000000);
                 // Estimate time remaining in minutes and seconds:
                 double timeRemaining = (seconds / (double)count) * (double)(totalPoints - count);
                 int minutes = (int)timeRemaining / 60;
